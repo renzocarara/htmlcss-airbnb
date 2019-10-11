@@ -8,23 +8,24 @@ h1 {
     text-align: center;
 }
 
+.header {
+    background-color: #a2a2a2;
+}
+
 main {
-    border: 1px solid blue;
     background-color: #f2f2f2;
     padding: 10px;
 }
 
 .container {
-    border: 1px solid red;
-    background-color: #eeee55;
+    background-color: #c2c2c2;
+    border: 1px solid black;
     width: 55vw;
-    /* regola i margini left e right ripetto a main */
+    /* regola in automatico i margini left e right ripetto a main */
     margin: auto;
 }
 
 .row {
-    background-color: red;
-    border: 1px solid black;
     margin: 2.5vw auto;
     width: 50vw;
     height: 50vh;
@@ -65,4 +66,15 @@ main {
     background-image: url("images/tokyo2000x1335.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.overlay {
+    /* applico la trasparenza dall'angolo in alto a sinistra */
+    /* del contenitore padre (.row) per tutta la dimensione del contenitore stesso */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4)
 }
