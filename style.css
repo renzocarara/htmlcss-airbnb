@@ -4,20 +4,30 @@ body {
     border: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 main {
     border: 1px solid blue;
     background-color: #f2f2f2;
-    margin: auto;
-    width: 70%;
+    padding: 10px;
 }
 
 .container {
     border: 1px solid red;
-    background-color: #fff;
+    background-color: #eeee55;
+    width: 55vw;
+    /* regola i margini left e right ripetto a main */
+    margin: auto;
 }
 
 .row {
     background-color: red;
     border: 1px solid black;
-    margin: 5px;
+    margin: 2.5vw auto;
+    width: 50vw;
+    height: 50vh
 }
+
+.city1 {}
