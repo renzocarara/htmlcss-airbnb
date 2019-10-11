@@ -4,11 +4,14 @@ body {
     border: 0;
 }
 
-h1 {
+h1, h5 {
     text-align: center;
+    margin: 0;
 }
 
-.header {
+header, footer {
+    color: #494949;
+    padding: 20px;
     background-color: #a2a2a2;
 }
 
