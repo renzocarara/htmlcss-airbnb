@@ -27,7 +27,42 @@ main {
     border: 1px solid black;
     margin: 2.5vw auto;
     width: 50vw;
-    height: 50vh
+    height: 50vh;
+    /* dichiaro questo contenitore come "relative" per poter utilizzare la  */
+    /* proprietà position absolute dall'elemento contenuto city_name*/
+    position: relative;
 }
 
-.city1 {}
+.city_name {
+    color: white;
+    font-family: Verdana;
+    text-shadow: 6px 4px 1px black;
+    font-size: 180%;
+    /* posiziono l'elemento al centro del contenitore, */
+    /* poi lo traslo, verso l'alto e verso sinistra, */
+    /* con 2 offset set pari a meta' delle sue dimensioni */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.city_img1 {
+    background-image: url("images/roma2048x1280.jpg");
+    /* indirizzo la visualizzazione sulla parte centrale dell'immagine */
+    background-position: center;
+    /* uso tutta la dimensione dell'immagine per riempiere il mio contenitore */
+    background-size: cover;
+}
+
+.city_img2 {
+    background-image: url("images/copenaghen2000x1333.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.city_img3 {
+    background-image: url("images/tokyo2000x1335.jpg");
+    background-position: center;
+    background-size: cover;
+}
