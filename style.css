@@ -4,7 +4,7 @@ body {
     border: 0;
 }
 
-h1, h5 {
+h1, h2, h5 {
     text-align: center;
     margin: 0;
 }
@@ -15,26 +15,22 @@ header, footer {
     background-color: #a2a2a2;
 }
 
-main {
-    background-color: #f2f2f2;
-    padding: 10px;
+footer {
+    font-size: 75%;
 }
 
 .container {
     background-color: #c2c2c2;
-    border: 1px solid black;
-    width: 55vw;
-    /* regola in automatico i margini left e right ripetto a main */
-    margin: auto;
 }
 
 .row {
-    margin: 2.5vw auto;
-    width: 50vw;
-    height: 50vh;
     /* dichiaro questo contenitore come "relative" per poter utilizzare la  */
-    /* proprietà position absolute dall'elemento contenuto city_name*/
+    /* proprietà position absolute con la classe .overlay*/
     position: relative;
+    /* margin: 10px 0 10px 0; */
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .city_name {
@@ -42,6 +38,17 @@ main {
     font-family: Verdana;
     text-shadow: 6px 4px 1px black;
     font-size: 180%;
+    position: relative;
+    /* -------------------versione con CALC() ------------------- */
+    /* allineo verticalmente il testo */
+    /* sposto il titolo in base alla SUA posizione */
+    /* la distanza di posizionamento verticale, la calcolo sfruttando la funzione "calc" */
+    /* varierà al variare della viewport height */
+    /* nota: 52px è la height dell'elemento testo da centrare */
+    top: calc((100% - 52px) / 2);
+    /* ----------------------------------------------------------- */
+    /* */
+    /* ------------------- versione con TRANSLATE ---------------- */
     /* posiziono l'elemento al centro del contenitore, */
     /* poi lo traslo, verso l'alto e verso sinistra, */
     /* con 2 offset set pari a meta' delle sue dimensioni */
@@ -49,6 +56,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* ---------------------------------------------------------- */
 }
 
 .city_img1 {
@@ -57,12 +65,16 @@ main {
     background-position: center;
     /* uso tutta la dimensione dell'immagine per riempiere il mio contenitore */
     background-size: cover;
+    /* fisso un margine per separare l'immagine da quella precedente */
+    border-bottom: solid #a2a2a2 10px;
 }
 
 .city_img2 {
     background-image: url("images/copenaghen2000x1333.jpg");
     background-position: center;
     background-size: cover;
+    /* fisso un margine per separare l'immagine da quella precedente */
+    border-bottom: solid #a2a2a2 10px;
 }
 
 .city_img3 {
